@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load thumbnail %}
+{% block title %}SHRIMP - Онлайн-магазин{% endblock title %}
+{% block content %}
+<div class="container-xl">
+    <h3>Корзина<span class="cart-product-counter" id="cart-product-counter" data-counter="{{ cart_container_count}}">{{ cart_container_count}} <span id="cart-product-conter-text">товар</span></span></h3>
+    <div class="row">
+        <div class="col-8">
+            {% for cart_container in cart_containers %}
+                {% include 'orders/cart-container.html' %}
+            {% endfor %}
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock content %}

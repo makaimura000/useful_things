@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load thumbnail %}
+{% block title%}
+  {{ product.name }} - {{ product.category.name }}
+{% endblock title %}
+{% block content %}
+<div class="container-xl">
+  <h3>{{ product.category.name }} - {{product.name}}</h3>
+  <div class="row">
+    <div class="col-5" style="display: flex; justify-content: center">
+      <img src="{{ product.image.url }}" height="300px" alt="" />
+    </div>
+    <div class="col-4">
+      <h6>Описание:</h6>
+      <p>{{product.description}}</p>
+    </div>
+    <div class="col-3">
+      <div class="card-product-detail">
+        <span class="value-product-detail"
+          >{{ product.value}}<span style="font-size: small">₽</span></span
+        >
+        {% if product.discount %}
+        <span class="old-value">{{ product.old_value }} ₽</span>
+        <span class="discount badge rounded-pill">–{{ product.discount }}%</span>
+        {% endif %}
+      
+          <div class="text-center">
+            <button
+              id="submit_btn"
+              type="submit"
+              class="btn btn-warning shadow"
+              style="width: 100%"
+              data-product-id="{{ product.pk }}"
+              data-product-name="{{ product.name }}"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,120 @@
+a {
+    text-decoration: none;
+}
+
+.product-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 450px;
+    position: relative;
+    border: none;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.card-product-detail {
+    background-color: rgb(235, 235, 235);
+    border-radius: 7px;
+    padding: 0.5rem;
+}
+
+.card:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.product-col {
+    justify-content: center;
+    display: flex;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+.image-wrapper {
+    margin: 5px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img-top {
+    height: 100%;
+    width: auto;
+}
+
+.card-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.card-description {
+    font-weight: lighter;
+    font-size: small;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.in-basket-button {
+    position: absolute;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.value {
+    font-weight: bold;
+}
+
+.value-product-detail {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: rgb(255, 94, 0);
+}
+
+.old-value {
+    color: gray;
+    text-decoration: line-through;
+    font-size: small;
+}
+
+.discount {
+    color: white;
+    background-color: rgb(255, 94, 0);
+    font-size: small;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgb(170, 170, 170);
+    outline: 0 none;
+}
+
+.cart-container-main {
+    margin: 10px;
+    min-width: 1000px;
+    padding: 10px;
+}
+
+.cart-container-main:hover {
+    background-color: rgb(235, 235, 235);
+    box-shadow: 5px 5px 15px rgb(192, 192, 192);
+}
+
+.cart-product-counter {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 20px;
+}

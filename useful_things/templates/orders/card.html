@@ -1,0 +1,26 @@
+<div class="card text-start">
+    <div class="image-wrapper">
+      <a href="{% url 'orders:product_detail' product.pk %}">
+        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="{% url 'orders:product_detail' product.pk %}" class="product-link">
+          <div class="card-title"><span class="value">{{ product.value}} ₽</span>
+          {% if product.discount %}
+          <span class="old-value">{{ product.old_value}} ₽</span>
+          <span class="discount badge rounded-pill">–{{ product.discount}}%</span>
+          {% endif %}
+          </div>
+    </a>
+    <a href="{% url 'orders:product_detail' product.pk %}" class="product-link">
+      <p class="card-text">{{ product.name}}</p>
+    </a>
+        <div class="card-description">
+            {{ product.description }}
+        </div>
+      <div class="text-center in-basket-button">
+          <a href="{% url 'orders:add_to_cart' product.pk %}" class="btn btn-warning shadow">В корзину</a>
+      </div>
+    </div>
+  </div>

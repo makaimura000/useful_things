@@ -1,0 +1,12 @@
+<div class="container-xl" style="margin-bottom: 2rem; margin-top: 2rem;">
+  <hr>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {% for banner in banners %}
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{{ banner.banner.url }}" class="d-block w-100" alt="...">
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
